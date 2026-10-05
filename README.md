@@ -29,8 +29,6 @@ The total training objective is
 L_SAGE = L_DES + λ_ESP · L_ESP + λ_LSA · L_LSA
 ```
 
-with the paper settings `λ_ESP = 2.0`, `λ_LSA = 0.1`, `K = 15`, `α = 1.0` (the defaults in `train_sage.py`).
-
 ### Key Results (Stable Diffusion v1.4)
 
 | Method | TIFA ↑ | GenEval ↑ | Avg. ASR (%) ↓ | CLIPScore ↑ | FID ↓ |
