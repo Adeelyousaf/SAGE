@@ -16,12 +16,7 @@ We trace this gap to **semantic collapse** in the text-encoder prompt embedding 
 
 ### SAGE = DES + two geometric regularizers
 
-This repository is built directly on the official implementation of [DES (Distorting Embedding Space, NeurIPS 2025)](https://github.com/amoeba04/des). Codebook construction, safe/unsafe prompt pairing, the three DES losses, the checkpoint format, image generation and evaluation are **kept unchanged**. SAGE adds two regularizers to the training objective, both implemented in [`train_sage.py`](train_sage.py):
-
-| Loss | Function in `train_sage.py` | What it does |
-|---|---|---|
-| **Embedding Spread Preservation (ESP)** | `variance_trace` | Measures the spread of a batch of safe prompt embeddings as the trace of their covariance (embeddings are flattened and L2-normalised). A hinge penalty `max(0, tr_original - tr_current)` stops the fine-tuned encoder from contracting the spread of safe embeddings below that of the original encoder. |
-| **Local Structure Alignment (LSA)** | `local_ranking_correlation_loss` | For each safe prompt, its top-K nearest neighbours are selected in the *original* embedding space. The loss is `1 - Pearson correlation` between the cosine similarities of these local pairs in the current and in the original space, so the local inter-prompt structure of the original encoder is preserved. It is evaluated on concept-perturbed safe embeddings (`safe + α · concept_direction`) so that structure is also preserved under concept injection. |
+This repository is built directly on the official implementation of [DES (Distorting Embedding Space, NeurIPS 2025)](https://github.com/amoeba04/des). Codebook construction, safe/unsafe prompt pairing, the three DES losses, the checkpoint format, image generation and evaluation are **kept unchanged**. SAGE adds two regularizers to the training objective, **Embedding Spread Preservation (ESP)** and **Local Structure Alignment (LSA)**, both implemented in [`train_sage.py`](train_sage.py).
 
 The total training objective is
 
