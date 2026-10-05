@@ -238,8 +238,6 @@ The fine-tuned text encoder used for all Stable Diffusion v1.4 results in the pa
 |---|---|---|---|---|
 | `SAGE.pt` (CLIP ViT-L/14 text encoder, 492 MB) | Stable Diffusion v1.4 | sexual (CoPro safe/unsafe prompts) | 2 epochs, lr 1e-5, batch 128, λ_safe 0.3, concept scale 205, K 15, α 1.0, λ_LSA 0.1, λ_ESP 2.0 | [SAGE.pt](https://github.com/Adeelyousaf/SAGE/releases/download/v1.0/SAGE.pt) |
 
-SHA-256: `6851733642964e1e274ff7a122cec31f916e46f7b95a7493893d761dc129c887`
-
 The file has the same format as a DES checkpoint (`model_state_dict` of the `CLIPTextModel` plus the training arguments), so it is used exactly like a checkpoint you train yourself:
 
 ```bash
