@@ -2,7 +2,7 @@
 
 **Official implementation of SAGE (Structure-Aware Geometric Regularization), accepted at ECCV 2026**
 
-[![ECCV 2026](https://img.shields.io/badge/ECCV-2026-blue)](https://eccv.ecva.net/)
+[![ECCV 2026](https://img.shields.io/badge/ECCV-2026-blue)](https://eccv.ecva.net/virtual/2026/poster/5377)
 [![arXiv](https://img.shields.io/badge/arXiv-2607.00402-b31b1b.svg)](https://arxiv.org/abs/2607.00402)
 [![Project Page](https://img.shields.io/badge/Project-Page-green)](https://adeelyousaf.github.io/SAGE_ECCV26_Project_Page/)
 
