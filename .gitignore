@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+
+# Training artefacts
+checkpoints/
+codebook*/
+results/
+logs*/
+*.pth
+*.pt
+!tasks/utils/metrics/q16/prompts.pt
+
+# Local image data
+datasets/coco_10k/
+
+# Downloaded pre-trained checkpoints
+pretrained_checkpoints/
