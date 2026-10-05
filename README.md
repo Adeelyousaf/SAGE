@@ -257,6 +257,16 @@ python generate.py \
     --text_encoder_path pretrained_checkpoints/SAGE.pt
 ```
 
+The same text encoder is also on Hugging Face in standard transformers format at [Adeely93/SAGE](https://huggingface.co/Adeely93/SAGE), for use with plain `diffusers`:
+
+```python
+from transformers import CLIPTextModel
+from diffusers import StableDiffusionPipeline
+
+text_encoder = CLIPTextModel.from_pretrained("Adeely93/SAGE")
+pipe = StableDiffusionPipeline.from_pretrained("CompVis/stable-diffusion-v1-4", text_encoder=text_encoder)
+```
+
 ## License
 
 This project is a derivative of [DES](https://github.com/amoeba04/des) and is released under the same **CC BY-NC 4.0** (Creative Commons Attribution-NonCommercial 4.0 International) license.
