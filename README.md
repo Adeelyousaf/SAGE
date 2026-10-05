@@ -5,6 +5,7 @@
 [![ECCV 2026](https://img.shields.io/badge/ECCV-2026-blue)](https://eccv.ecva.net/virtual/2026/poster/5377)
 [![arXiv](https://img.shields.io/badge/arXiv-2607.00402-b31b1b.svg)](https://arxiv.org/abs/2607.00402)
 [![Project Page](https://img.shields.io/badge/Project-Page-green)](https://adeelyousaf.github.io/SAGE_ECCV26_Project_Page/)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Adeelyousaf/SAGE/blob/main/SAGE_demo.ipynb)
 
 > **Authors**: Adeel Yousaf, Soumik Ghosh, James Beetham, Amrit Singh Bedi, Mubarak Shah
 
@@ -33,6 +34,12 @@ L_SAGE = L_DES + λ_ESP · L_ESP + λ_LSA · L_LSA
 | **SAGE (ours)** | **75.4** | **59.8** | 1.2 | **26.4** | **15.93** |
 
 ASR is averaged over MMA-Diffusion, SneakyPrompt, I2P (sexual), Ring-A-Bell and P4D. SAGE keeps the safety of DES while recovering most of the structured utility (TIFA, GenEval) that DES loses. Please see the paper for the full comparison with other safety-alignment methods and the per-category breakdowns.
+
+## Colab Demo
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Adeelyousaf/SAGE/blob/main/SAGE_demo.ipynb)
+
+The [demo notebook](SAGE_demo.ipynb) runs on a free Colab T4 GPU with no setup. It loads a stock Stable Diffusion v1.4 pipeline and swaps its text encoder between the base model, the official DES checkpoint and the released SAGE checkpoint, generating from the same seed, to show (1) that SAGE preserves compositional details on a TIFA prompt from Fig. 8 of the paper where DES loses them, and (2) that SAGE still turns an unsafe prompt into a safe image.
 
 ## Repository Structure
 
