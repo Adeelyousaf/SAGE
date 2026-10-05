@@ -274,17 +274,6 @@ If you use this code or find our work helpful, please cite:
 }
 ```
 
-Since SAGE builds on DES, please also cite:
-
-```bibtex
-@inproceedings{ahn2025des,
-  title={Mitigating Sexual Content Generation via Embedding Distortion in Text-conditioned Diffusion Models},
-  author={Ahn, Jaesin and Jung, Heechul},
-  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},
-  year={2025}
-}
-```
-
 ## Acknowledgements
 
-This codebase is built on the official implementation of [DES](https://github.com/amoeba04/des) by Jaesin Ahn and Heechul Jung; all components other than the SAGE regularizers in `train_sage.py` are theirs. We also thank the authors of [UnlearnDiffAtk](https://github.com/OPTML-Group/Diffusion-MU-Attack), whose evaluation code DES partially referenced.
+This codebase is built on the official implementation of [DES](https://github.com/amoeba04/des); all components other than the SAGE regularizers in `train_sage.py` are inherited from that repository.
