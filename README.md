@@ -1,4 +1,4 @@
-# The Illusion of High Utility in Safety Alignment of Text-to-Image Diffusion Models
+# The Illusion of High Utility in Safety Alignment of Text-to-Image Diffusion Models (ECCV-26)
 
 **Official implementation of SAGE (Structure-Aware Geometric Regularization), accepted at ECCV 2026**
 
